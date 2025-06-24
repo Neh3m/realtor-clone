@@ -16,6 +16,9 @@ export default function SignIn() {
       [e.target.id]: e.target.value,
     }));
   }
+  function onSubmit(e){
+    e.preventDefault();
+  }
 
   return (
     <section>
@@ -29,7 +32,7 @@ export default function SignIn() {
           />
         </div>
         <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20">
-          <form>
+          <form onSubmit={onSubmit}>
             <input
               type="email"
               id="email"
